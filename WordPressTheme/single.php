@@ -47,15 +47,27 @@
       <div class="c-page-link">
         <div class="c-page-link__inner">
           <div class="c-page-link__flex">
+        <?php
+          $prev = get_previous_post();
+          $prev_url = get_permalink($prev->ID);
+          $next = get_next_post();
+          $next_url = get_permalink($next->ID);
+        ?>
             <div class="c-page-link__prev">
-              <a href="">前の記事</a>
+              <?php if($prev): ?>
+              <a href="<?php echo $prev_url; ?>">前の記事</a>
+              <?php endif; ?>
             </div>
+
             <div class="c-page-link__next">
-              <a href="">次の記事</a>
+              <?php if($next): ?>
+              <a href="<?php echo $next_url; ?>">次の記事</a>
+              <?php endif; ?>
             </div>
+
           </div>
           <div class="c-page-link__archive">
-            <a href="">NEWS一覧</a>
+            <a href="<?php echo esc_url(home_url('/news/')); ?>">NEWS一覧</a>
           </div>
         </div>
       </div>
