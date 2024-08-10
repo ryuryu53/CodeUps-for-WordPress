@@ -49,9 +49,9 @@
           <div class="c-page-link__flex">
         <?php
           $prev = get_previous_post();
-          $prev_url = get_permalink($prev->ID);
+          $prev_url = $prev ? get_permalink($prev->ID) : '';
           $next = get_next_post();
-          $next_url = get_permalink($next->ID);
+          $next_url = $next ? get_permalink($next->ID) : '';
         ?>
             <div class="c-page-link__prev">
               <?php if($prev): ?>
