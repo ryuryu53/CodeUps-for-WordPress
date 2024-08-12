@@ -49,18 +49,24 @@
           <div class="c-page-link__flex">
         <?php
           $prev = get_previous_post();
-          $prev_url = $prev ? get_permalink($prev->ID) : '';
+          // $prev_url = $prev ? get_permalink($prev->ID) : '';
+          if ( ! empty( $prev ) ) {
+            $prev_url = esc_url( get_permalink( $prev->ID ) );
+          }
           $next = get_next_post();
-          $next_url = $next ? get_permalink($next->ID) : '';
+          // $next_url = $next ? get_permalink($next->ID) : '';
+          if ( ! empty( $next ) ) {
+            $next_url = esc_url( get_permalink( $next->ID ) );
+          }
         ?>
             <div class="c-page-link__prev">
-              <?php if($prev): ?>
+              <?php if ( ! empty( $prev ) ) : ?>
               <a href="<?php echo $prev_url; ?>">前の記事</a>
               <?php endif; ?>
             </div>
 
             <div class="c-page-link__next">
-              <?php if($next): ?>
+            <?php if ( ! empty( $next ) ) : ?>
               <a href="<?php echo $next_url; ?>">次の記事</a>
               <?php endif; ?>
             </div>
