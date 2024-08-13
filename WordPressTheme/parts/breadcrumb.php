@@ -1,5 +1,9 @@
 <div class="c-breadcrumb">
   <div class="l-inner">
-    <div>HOME > NEWS > Webデザインニュースサイト「ウェブマガジン」に取材いただきました</div>
+    <?php
+    if (function_exists('bcn_display')) {
+      bcn_display();
+    }
+    ?>
   </div>
 </div>
