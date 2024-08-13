@@ -10,11 +10,7 @@
   </div>
 
   <!-- パンくず -->
-  <div class="c-breadcrumb">
-    <div class="l-inner">
-      <div>HOME > NEWS > Webデザインニュースサイト「ウェブマガジン」に取材いただきました</div>
-    </div>
-  </div>
+  <?php get_template_part('parts/breadcrumb') ?>
 
   <?php if (have_posts()): while (have_posts()): the_post(); ?>
 
