@@ -40,65 +40,37 @@
           <h2 class="c-section-header__subpage">募集中の職種</h2>
         </div>
         <div class="p-page-recruit__items">
-          <!-- ループ -->
-          <div class="p-page-recruit__item">
-            <h3 class="p-page-recruit__job-title">Webデザイナー</h3>
-            <dl class="p-page-recruit__lists p-common-lists">
-              <div class="p-common-lists__list">
-                <dt>雇用形態</dt>
-                <dd>合同会社CodeUps</dd>
+          <?php if (have_posts()): while (have_posts()): the_post(); ?>
+            <div class="p-page-recruit__item">
+              <h3 class="p-page-recruit__job-title"><?php the_title(); ?></h3>
+              <dl class="p-page-recruit__lists p-common-lists">
+                <div class="p-common-lists__list">
+                  <dt>雇用形態</dt>
+                  <dd><?php the_field('recruit_1'); ?></dd>
+                </div>
+                <div class="p-common-lists__list">
+                  <dt>給与</dt>
+                  <dd><?php the_field('recruit_2'); ?></dd>
+                </div>
+                <div class="p-common-lists__list">
+                  <dt>仕事内容</dt>
+                  <dd><?php the_field('recruit_3'); ?></dd>
+                </div>
+                <div class="p-common-lists__list">
+                  <dt>勤務時間</dt>
+                  <dd><?php the_field('recruit_4'); ?></dd>
+                </div>
+                <div class="p-common-lists__list">
+                  <dt>応募資格</dt>
+                  <dd><?php the_field('recruit_5'); ?></dd>
+                </div>
+              </dl>
+              <div class="p-page-recruit__apply">
+                <a href="<?php esc_url(the_field('recruit_6')); ?>" class="c-button" target="_blank">応募する</a>
+                <p>求人サイトへ遷移します</p>
               </div>
-              <div class="p-common-lists__list">
-                <dt>給与</dt>
-                <dd>合同会社CodeUps</dd>
-              </div>
-              <div class="p-common-lists__list">
-                <dt>仕事内容</dt>
-                <dd>合同会社CodeUps</dd>
-              </div>
-              <div class="p-common-lists__list">
-                <dt>勤務時間</dt>
-                <dd>合同会社CodeUps</dd>
-              </div>
-              <div class="p-common-lists__list">
-                <dt>応募資格</dt>
-                <dd>合同会社CodeUps</dd>
-              </div>
-            </dl>
-            <div class="p-page-recruit__apply">
-              <a href="" class="c-button">応募する</a>
-              <p>求人サイトへ遷移します</p>
             </div>
-          </div>
-          <div class="p-page-recruit__item">
-            <h3 class="p-page-recruit__job-title">Webデザイナー</h3>
-            <dl class="p-page-recruit__lists p-common-lists">
-              <div class="p-common-lists__list">
-                <dt>社名</dt>
-                <dd>合同会社CodeUps</dd>
-              </div>
-              <div class="p-common-lists__list">
-                <dt>設立</dt>
-                <dd>合同会社CodeUps</dd>
-              </div>
-              <div class="p-common-lists__list">
-                <dt>代表取締役</dt>
-                <dd>合同会社CodeUps</dd>
-              </div>
-              <div class="p-common-lists__list">
-                <dt>資本金</dt>
-                <dd>合同会社CodeUps</dd>
-              </div>
-              <div class="p-common-lists__list">
-                <dt>所在地</dt>
-                <dd>合同会社CodeUps</dd>
-              </div>
-            </dl>
-            <div class="p-page-recruit__apply">
-              <a href="" class="c-button">応募する</a>
-              <p>求人サイトへ遷移します</p>
-            </div>
-          </div>
+          <?php endwhile; endif; ?>
         </div>
       </div>
       <div class="p-page-recruit__movies">
