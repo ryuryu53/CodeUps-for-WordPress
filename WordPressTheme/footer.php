@@ -1,5 +1,5 @@
   <?php if(!is_page('contact')): ?>
-  <section class="l-contact p-contact">
+  <section class="l-contact <?php if (is_archive('recruit')) { echo 'l-contact--mt0'; } ?> p-contact">
     <div class="p-contact__inner l-inner">
       <div class="p-contact__title c-section-header">
         <h2 class="c-section-header__engtitle">CONTACT</h2>

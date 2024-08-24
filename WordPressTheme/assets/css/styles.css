@@ -167,7 +167,7 @@ select::-ms-expand {
 	margin-top: 5rem;
 }
 
-.l-contact--mt0 {
+.l-contact.l-contact--mt0 {
 	margin-top: 0;
 }
 
