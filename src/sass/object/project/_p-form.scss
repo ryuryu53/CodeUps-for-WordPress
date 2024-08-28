@@ -12,6 +12,12 @@
     display: block;
     gap: 0;
   }
+
+  // wpカスタマイズ
+    .wpcf7-list-item {
+      display: block;
+      margin: 0;
+    }
 }
 .p-form dl:not(:first-child) {
   margin-top: rem(30);

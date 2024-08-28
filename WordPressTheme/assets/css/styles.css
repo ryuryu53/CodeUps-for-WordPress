@@ -666,6 +666,11 @@ select::-ms-expand {
 	margin-top: 0.3125rem;
 }
 
+.p-form__radio .wpcf7-list-item {
+	display: block;
+	margin: 0;
+}
+
 .p-form dl:not(:first-child) {
 	margin-top: 1.875rem;
 }
@@ -1293,8 +1298,13 @@ textarea:focus {
 button,
 [type=button],
 [type=submit] {
+	background: transparent linear-gradient(90deg, #7633a4 0%, #250d65 100%) 0% 0% no-repeat padding-box !important;
+}
+
+button,
+[type=button],
+[type=submit] {
 	-webkit-text-decoration: none;
-	background: transparent linear-gradient(90deg, #7633a4 0%, #250d65 100%) 0% 0% no-repeat padding-box;
 	background-image: none;
 	border: none;
 	border-radius: 0;
@@ -1451,6 +1461,10 @@ textarea {
 	height: 15.9375rem;
 	max-width: 37.5rem;
 	width: 100%;
+}
+
+.wpcf7-spinner {
+	display: none !important;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
